@@ -32,7 +32,7 @@ export const FormDemo = () => {
         label="Email Address"
         placeholder="Enter your email..."
         value={email}
-        onChangeText={text => setEmail(text)}
+        onChangeText={(text: string) => setEmail(text)}
         errorText={errors.email}
         keyboardType="email-address"
         autoCapitalize="none"
@@ -41,7 +41,7 @@ export const FormDemo = () => {
         label="Password"
         placeholder="Enter your password..."
         value={password}
-        onChangeText={text => setPassword(text)}
+        onChangeText={(text: string) => setPassword(text)}
         secureTextEntry
         errorText={errors.password}
         autoCapitalize="none"

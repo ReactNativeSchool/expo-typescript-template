@@ -4,7 +4,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { List } from '../screens/List';
 import { TextDemo, ButtonDemo, FormDemo } from '../screens/Demos';
 
-const MainStack = createStackNavigator();
+export type MainStackParams = {
+  List: undefined;
+  TextDemo: undefined;
+  FormDemo: undefined;
+  ButtonDemo: undefined;
+};
+
+const MainStack = createStackNavigator<MainStackParams>();
 
 export const Main = () => (
   <MainStack.Navigator>

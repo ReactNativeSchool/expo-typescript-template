@@ -5,6 +5,7 @@ import {
   View,
   StyleProp,
   ViewStyle,
+  TextInputProps as RNTextInputProps,
 } from 'react-native';
 
 import { Text } from './Text';
@@ -37,10 +38,10 @@ const styles = StyleSheet.create({
   },
 });
 
-type TextInputProps = {
+interface TextInputProps extends RNTextInputProps {
   label: string;
   errorText?: string;
-};
+}
 
 export const TextInput = ({
   label,
