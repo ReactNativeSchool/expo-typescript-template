@@ -1,5 +1,5 @@
 {
-  "name": "@react-native-school/expo-template",
+  "name": "@react-native-school/expo-typescript-template",
   "version": "1.0.2",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -65,13 +65,13 @@
     "eslint",
     "prettier"
   ],
-  "homepage": "https://github.com/ReactNativeSchool/react-native-school-expo-template",
+  "homepage": "https://github.com/ReactNativeSchool/expo-typescript-template",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ReactNativeSchool/react-native-school-expo-template.git"
+    "url": "https://github.com/ReactNativeSchool/expo-typescript-template.git"
   },
   "bugs": {
-    "url": "https://github.com/ReactNativeSchool/react-native-school-expo-template/issues"
+    "url": "https://github.com/ReactNativeSchool/expo-typescript-template/issues"
   },
   "author": "Spencer Carli",
   "license": "MIT"
