@@ -1,0 +1,74 @@
+{
+  "name": "@react-native-school/expo-template",
+  "version": "1.0.2",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject",
+    "lint": "eslint .",
+    "format": "prettier --write '**/*.js'",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@react-native-community/masked-view": "0.1.10",
+    "@react-navigation/native": "^5.9.4",
+    "@react-navigation/stack": "^5.14.4",
+    "expo": "~41.0.1",
+    "expo-status-bar": "~1.0.4",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
+    "react-native-gesture-handler": "~1.10.2",
+    "react-native-reanimated": "~2.1.0",
+    "react-native-safe-area-context": "3.2.0",
+    "react-native-screens": "~3.0.0",
+    "react-native-web": "~0.13.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@testing-library/jest-native": "^4.0.1",
+    "@testing-library/react-hooks": "^5.1.2",
+    "@testing-library/react-native": "^7.2.0",
+    "eslint": "^7.24.0",
+    "eslint-config-handlebarlabs": "^0.0.6",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "jest-expo": "^41.0.0",
+    "prettier": "^2.2.1",
+    "react-test-renderer": "^17.0.2"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*)"
+    ],
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect"
+    ]
+  },
+  "description": "A simple Expo template with navigation, testing, and linting setup.",
+  "keywords": [
+    "expo",
+    "template",
+    "expo-template",
+    "react-native-school",
+    "react-native",
+    "react-native-template",
+    "jest",
+    "eslint",
+    "prettier"
+  ],
+  "homepage": "https://github.com/ReactNativeSchool/react-native-school-expo-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ReactNativeSchool/react-native-school-expo-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ReactNativeSchool/react-native-school-expo-template/issues"
+  },
+  "author": "Spencer Carli",
+  "license": "MIT"
+}
