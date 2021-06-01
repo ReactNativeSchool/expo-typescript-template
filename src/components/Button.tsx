@@ -1,5 +1,12 @@
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import {
+  TouchableOpacity,
+  Text,
+  StyleSheet,
+  StyleProp,
+  TextStyle,
+  ViewStyle,
+} from 'react-native';
 
 import colors from '../constants/colors';
 
@@ -28,9 +35,19 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Button = ({ onPress = () => {}, children = '', type }) => {
-  const containerStyles = [styles.container];
-  const textStyles = [styles.text];
+type ButtonProps = {
+  onPress: () => void;
+  children: string;
+  type?: 'outline';
+};
+
+export const Button = ({
+  onPress = () => {},
+  children = '',
+  type,
+}: ButtonProps) => {
+  const containerStyles: StyleProp<ViewStyle>[] = [styles.container];
+  const textStyles: StyleProp<TextStyle>[] = [styles.text];
 
   if (type === 'outline') {
     containerStyles.push(styles.containerOutline);

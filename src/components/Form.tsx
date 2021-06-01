@@ -1,5 +1,11 @@
 import React from 'react';
-import { TextInput as RNTextInput, StyleSheet, View } from 'react-native';
+import {
+  TextInput as RNTextInput,
+  StyleSheet,
+  View,
+  StyleProp,
+  ViewStyle,
+} from 'react-native';
 
 import { Text } from './Text';
 import colors from '../constants/colors';
@@ -31,8 +37,17 @@ const styles = StyleSheet.create({
   },
 });
 
-export const TextInput = ({ label, errorText, ...rest }) => {
-  const borderStyles = [styles.border];
+type TextInputProps = {
+  label: string;
+  errorText?: string;
+};
+
+export const TextInput = ({
+  label,
+  errorText = '',
+  ...rest
+}: TextInputProps) => {
+  const borderStyles: StyleProp<ViewStyle> = [styles.border];
 
   if (errorText && errorText.length > 0) {
     borderStyles.push(styles.borderError);
@@ -40,10 +55,10 @@ export const TextInput = ({ label, errorText, ...rest }) => {
 
   return (
     <View style={styles.inputContainer}>
-      <Text style={styles.labelText}>{label}</Text>
+      <Text style={[styles.labelText]}>{label}</Text>
       <RNTextInput style={styles.textInput} {...rest} />
       <View style={borderStyles} />
-      <Text style={styles.errorText}>{errorText}</Text>
+      <Text style={[styles.errorText]}>{errorText}</Text>
     </View>
   );
 };

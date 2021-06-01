@@ -19,13 +19,23 @@ const styles = StyleSheet.create({
   },
 });
 
-export const ListItem = ({ title, subtitle, onPress = () => null }) => {
+type ListItemProps = {
+  title: string;
+  subtitle: string;
+  onPress: () => void;
+};
+
+export const ListItem = ({
+  title,
+  subtitle,
+  onPress = () => null,
+}: ListItemProps) => {
   const rowStyles = [styles.row];
 
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={rowStyles}>
-        <Text style={styles.titleText}>{title}</Text>
+        <Text style={[styles.titleText]}>{title}</Text>
         <Text>{subtitle}</Text>
       </View>
     </TouchableOpacity>

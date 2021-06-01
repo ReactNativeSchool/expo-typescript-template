@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text as RNText } from 'react-native';
+import { StyleSheet, Text as RNText, StyleProp, TextStyle } from 'react-native';
 
 import colors from '../constants/colors';
 
@@ -21,8 +21,14 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Text = ({ type, children, style = {} }) => {
-  let textStyles = [styles.text];
+type TextProps = {
+  type?: 'header' | 'subheader';
+  children: string;
+  style?: StyleProp<TextStyle>[];
+};
+
+export const Text = ({ type, children, style = [] }: TextProps) => {
+  let textStyles: StyleProp<TextStyle>[] = [styles.text];
 
   if (type === 'header') {
     textStyles.push(styles.headerText);
@@ -30,11 +36,7 @@ export const Text = ({ type, children, style = {} }) => {
     textStyles.push(styles.subHeaderText);
   }
 
-  if (Array.isArray(style)) {
-    textStyles = [...textStyles, ...style];
-  } else {
-    textStyles.push(style);
-  }
+  textStyles = [...textStyles, ...style];
 
   return <RNText style={textStyles}>{children}</RNText>;
 };

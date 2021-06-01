@@ -32,13 +32,16 @@
     "@testing-library/jest-native": "^4.0.1",
     "@testing-library/react-hooks": "^5.1.2",
     "@testing-library/react-native": "^7.2.0",
+    "@types/jest": "^26.0.23",
+    "@types/react-native": "~0.63.2",
     "eslint": "^7.24.0",
     "eslint-config-handlebarlabs": "^0.0.6",
     "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-prettier": "^3.4.0",
     "jest-expo": "^41.0.0",
     "prettier": "^2.2.1",
-    "react-test-renderer": "^17.0.2"
+    "react-test-renderer": "^17.0.2",
+    "typescript": "~4.0.0"
   },
   "jest": {
     "preset": "jest-expo",
