@@ -46,6 +46,9 @@ export const List = ({ navigation }: Props) => {
         <ListItem
           title={item.title}
           subtitle={item.subtitle}
+          // @ts-ignore
+          // Disabling the next line because all the item.targets are valid - that data just
+          // isn't getting picked up by TypeScript
           onPress={() => navigation.push(item.target)}
         />
       )}

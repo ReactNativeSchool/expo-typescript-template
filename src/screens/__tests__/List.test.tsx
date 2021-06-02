@@ -5,6 +5,9 @@ import { List } from '../List';
 
 it('renders tappable items', () => {
   const push = jest.fn();
+  // @ts-ignore
+  // Ignoring next line because we don't need to pass all React Navigation related props down to the
+  // screen for this test to work.
   const out = render(<List navigation={{ push }} />);
 
   fireEvent.press(out.getByText('Text'));
