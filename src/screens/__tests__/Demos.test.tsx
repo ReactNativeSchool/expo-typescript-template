@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import { Alert } from 'react-native';
-import { mocked } from 'ts-jest/utils';
 
 import { TextDemo, ButtonDemo, FormDemo } from '../Demos';
 import { useLogin } from '../../util/auth';
@@ -25,7 +24,7 @@ describe('FormDemo', () => {
     const submit = jest.fn();
     const setEmail = jest.fn();
     const setPassword = jest.fn();
-    mocked(useLogin).mockReturnValueOnce({
+    useLogin.mockReturnValueOnce({
       errors: {},
       submit,
       setEmail,
@@ -52,7 +51,7 @@ describe('FormDemo', () => {
   });
 
   it('renders error message', () => {
-    mocked(useLogin).mockReturnValueOnce({
+    useLogin.mockReturnValueOnce({
       errors: { email: 'this is an error' },
     });
     const out = render(<FormDemo />);
