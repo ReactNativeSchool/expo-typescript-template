@@ -6,11 +6,12 @@ import { mocked } from 'ts-jest/utils';
 import { TextDemo, ButtonDemo, FormDemo } from '../Demos';
 import { useLogin } from '../../util/auth';
 
-jest.mock('../../util/auth.js', () => ({
-  useLogin: jest.fn(() => ({
-    errors: {},
-  })),
-}));
+jest.mock('../../util/auth');
+// jest.mock('../../util/auth', () => ({
+//   useLogin: jest.fn(() => ({
+//     errors: {},
+//   })),
+// }));
 
 describe('TextDemo', () => {
   it('renders the text', () => {
@@ -30,6 +31,8 @@ describe('FormDemo', () => {
       submit,
       setEmail,
       setPassword,
+      email: '123',
+      password: '123',
     });
 
     const out = render(<FormDemo />);
@@ -54,6 +57,11 @@ describe('FormDemo', () => {
   it('renders error message', () => {
     mocked(useLogin).mockReturnValueOnce({
       errors: { email: 'this is an error' },
+      submit: jest.fn(),
+      setEmail: jest.fn(),
+      setPassword: jest.fn(),
+      email: '123',
+      password: '123',
     });
     const out = render(<FormDemo />);
 
