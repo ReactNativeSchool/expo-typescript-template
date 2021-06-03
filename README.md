@@ -1,7 +1,8 @@
-# React Native School Expo Template
+# React Native School TypeScript Expo Template
 
 A simple Expo template with the following features:
 
+- All TypeScript
 - Eslint & Prettier configured
 - React Navigation v5
 - Testing Configured
@@ -21,6 +22,7 @@ expo init --template @react-native-school/expo-template
 - Run on iOS: `yarn ios` or `npm run ios`
 - Run on Android: `yarn android` or `npm run android`
 - Run on Web: `yarn web` or `npm run web`
+- Compile TypeScript: `yarn tsc`
 - Run Tests: `yarn test` or `npm run test`
 - Lint Code: `yarn lint` or `npm run lint`
 - Format Code: `yarn format` or `npm run format`
