@@ -7,11 +7,6 @@ import { TextDemo, ButtonDemo, FormDemo } from '../Demos';
 import { useLogin } from '../../util/auth';
 
 jest.mock('../../util/auth');
-// jest.mock('../../util/auth', () => ({
-//   useLogin: jest.fn(() => ({
-//     errors: {},
-//   })),
-// }));
 
 describe('TextDemo', () => {
   it('renders the text', () => {
