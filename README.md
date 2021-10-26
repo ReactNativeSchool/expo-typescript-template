@@ -4,7 +4,7 @@ A simple Expo template with the following features:
 
 - All TypeScript
 - Eslint & Prettier configured
-- React Navigation v5
+- React Navigation v6
 - Testing Configured
 - Simple project structure
 - Small component library to get started with
